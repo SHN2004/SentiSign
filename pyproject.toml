@@ -1,0 +1,16 @@
+[project]
+name = "main-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "opencv-python>=4.12.0.88",
+    "parler-tts",
+    "pillow>=11.3.0",
+    "torch>=2.8.0",
+    "torchvision>=0.23.0",
+]
+
+[tool.uv.sources]
+parler-tts = { git = "https://github.com/huggingface/parler-tts.git" }
