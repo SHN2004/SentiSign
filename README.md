@@ -12,7 +12,7 @@ SentiSign is a multi-modal system that translates sign language to speech while 
 │         │    │ Recognition  │    │  Aware      │    │   TTS    │
 │         │    │ (Transformer)│    │Integration  │    │          │
 └─────────┘    └──────────────┘    │   (SLM)     │    └──────────┘
-     │                              └─────────────┘
+     │                             └─────────────┘
      │         ┌──────────────┐            ▲
      └────────▶│   Emotion    │────────────┘
                │  Detection   │
