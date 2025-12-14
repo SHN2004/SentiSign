@@ -30,9 +30,22 @@ SentiSign is a multi-modal system that translates sign language to speech while 
 
 ## Quick Start
 
+### ⚠️ Important: Python Version Requirement
+
+**This project requires Python 3.11 or 3.12.**
+
+Python 3.13+ is **NOT supported** due to PyTorch compatibility issues. If you encounter a "DLL initialization routine failed" error, you're likely using Python 3.13.
+
+Check your Python version:
+```bash
+python --version  # Should show 3.11.x or 3.12.x
+```
+
+If you have Python 3.13, install Python 3.11 and recreate your virtual environment. See [docs/SETUP.md](docs/SETUP.md) for detailed installation instructions.
+
 ### Prerequisites
 
-- Python 3.9 or higher
+- Python 3.11 or 3.12 (NOT 3.13+)
 - Webcam
 - (Optional) CUDA-capable GPU for faster inference
 
@@ -153,7 +166,7 @@ SLM-based integration of sign language and emotion.
 - **Computer Vision**: OpenCV
 - **TTS**: Parler TTS (Hugging Face Transformers)
 - **Package Management**: uv
-- **Language**: Python 3.9+
+- **Language**: Python 3.11 or 3.12
 
 ## Hardware Support
 

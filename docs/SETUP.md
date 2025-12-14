@@ -8,22 +8,50 @@ Complete installation and setup instructions for SentiSign.
 
 **Minimum**:
 - Operating System: Windows 10, macOS 10.15+, or Linux (Ubuntu 20.04+)
-- Python: 3.9 or higher
+- Python: 3.11 or 3.12 (NOT 3.13+)
 - RAM: 8 GB
 - Webcam: 720p, 30 FPS
 - Disk Space: 3 GB (includes models and dependencies)
 
 **Recommended**:
-- Python: 3.10 or 3.11
+- Python: 3.11 (most tested and stable)
 - RAM: 16 GB
 - GPU: NVIDIA with CUDA 11.8+ (6+ GB VRAM)
 - Webcam: 1080p, 60 FPS
 
 ### Software Prerequisites
 
-1. **Python 3.9+**
+1. **Python 3.11 or 3.12**
+
+   This project requires Python 3.11 or 3.12. **Python 3.13+ will NOT work** due to PyTorch compatibility.
+
    ```bash
-   python --version  # Should be 3.9 or higher
+   # Check your Python version
+   python --version
+
+   # If you see "Python 3.13.x", you need to install Python 3.11
+   ```
+
+   **Installing Python 3.11**:
+
+   **macOS** (using Homebrew):
+   ```bash
+   brew install python@3.11
+   ```
+
+   **Windows**:
+   - Download from: https://www.python.org/downloads/release/python-31110/
+   - During installation, check "Add Python to PATH"
+
+   **Linux** (Ubuntu/Debian):
+   ```bash
+   sudo apt update
+   sudo apt install python3.11 python3.11-venv python3.11-dev
+   ```
+
+   **Verify installation**:
+   ```bash
+   python3.11 --version  # Should show 3.11.x
    ```
 
 2. **uv** (Python package manager)
@@ -62,7 +90,14 @@ Using **uv** (recommended):
 
 ```bash
 # Create virtual environment
+# uv will automatically use Python 3.11 from .python-version file
 uv venv
+
+# Or explicitly specify Python 3.11:
+uv venv --python 3.11
+
+# Or if you have python3.11 in PATH:
+uv venv --python python3.11
 
 # Activate virtual environment
 # On macOS/Linux:
@@ -71,6 +106,8 @@ source .venv/bin/activate
 # On Windows:
 .venv\Scripts\activate
 ```
+
+**Note**: The repository includes a `.python-version` file that tells `uv` to automatically use Python 3.11. If you don't have Python 3.11 installed, `uv` will show an error message.
 
 ### Step 3: Install Dependencies
 
