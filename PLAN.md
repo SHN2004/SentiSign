@@ -1,6 +1,6 @@
 # STMC-Transformer Sign Language Translation Implementation Plan
 
-## Summary
+## Summary 
 
 Implement sign-to-text translation for PHOENIX-2014-T dataset using a Transformer-based architecture with offline feature extraction. This follows the approach from "Better Sign Language Translation with STMC-Transformer" (COLING 2020).
 
